@@ -13,18 +13,18 @@ export class BallSizePanel extends React.Component {
         <p className="ballNumber">Size: {radius} </p>
         <div className="button-container">
           <button
-            id="increase"
-            className="increase-btn"
-            onClick={increaseRadius}
-          >
-            +
-          </button>
-          <button
             id="decrease"
             className="decrease-btn"
             onClick={decreaseRadius}
           >
             -
+          </button>
+          <button
+            id="increase"
+            className="increase-btn"
+            onClick={increaseRadius}
+          >
+            +
           </button>
         </div>
       </div>

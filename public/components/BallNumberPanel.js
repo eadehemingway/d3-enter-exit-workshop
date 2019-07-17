@@ -13,18 +13,18 @@ export class BallNumberPanel extends React.Component {
         <p className="ballNumber">balls: {balls.length}</p>
         <div className="button-container">
           <button
-            id="increase"
-            className="increase-btn"
-            onClick={addWoolToQueue}
-          >
-            +
-          </button>
-          <button
             id="decrease"
             className="decrease-btn"
             onClick={minusWoolFromQueue}
           >
             -
+          </button>
+          <button
+            id="increase"
+            className="increase-btn"
+            onClick={addWoolToQueue}
+          >
+            +
           </button>
         </div>
       </div>

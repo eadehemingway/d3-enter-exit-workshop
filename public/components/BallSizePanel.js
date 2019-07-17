@@ -3,7 +3,7 @@ import React from 'react';
 export const BallSizePanel = ({ radius, increaseRadius, decreaseRadius }) => {
   return (
     <div className="size-panel">
-      <p className="ballNumber">Size: {radius} </p>
+      <p className="panelScreen">size: {radius} </p>
       <div className="button-container">
         <button id="decrease" className="decrease-btn" onClick={decreaseRadius}>
           -

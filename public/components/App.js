@@ -16,6 +16,7 @@ export class App extends React.Component {
     };
   }
   componentDidMount() {}
+
   updateWool = () => {};
 
   addWoolToQueue = () => {
@@ -30,13 +31,9 @@ export class App extends React.Component {
     this.setState({ balls: newBallArr });
   };
 
-  increaseRadius = () => {
-    this.setState({ radius: this.state.radius + 1 });
-  };
+  increaseRadius = () => this.setState({ radius: this.state.radius + 1 });
 
-  decreaseRadius = () => {
-    this.setState({ radius: this.state.radius - 1 });
-  };
+  decreaseRadius = () => this.setState({ radius: this.state.radius - 1 });
 
   changeColor = () => {
     const colors = [

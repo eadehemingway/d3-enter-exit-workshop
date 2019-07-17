@@ -7,7 +7,7 @@ export const BallNumberPanel = ({
 }) => {
   return (
     <div className="number-panel">
-      <p className="ballNumber">balls: {balls.length}</p>
+      <p className="panelScreen">balls: {balls.length}</p>
       <div className="button-container">
         <button
           id="decrease"

@@ -46,25 +46,28 @@ export class App extends React.Component {
     this.setState({ balls: newBallArr });
   };
 
-  dropWool = () => {
+  updateWool = () => {
     const { balls, radius, color } = this.state;
     const ballSelection = d3
       .select('svg')
       .selectAll('circle')
       .data(balls);
-    ballSelection
+
+    const enterSelection = ballSelection
       .enter()
       .append('circle')
-      .attr('r', radius)
       .attr('cx', d => d.x)
       .attr('cy', 0)
-      .attr('stroke', color)
       .attr('fill', 'none')
       .attr('stroke-width', 6)
       .transition()
       .duration(1250)
       .ease(d3.easeBounce)
       .attr('cy', d => d.y);
+
+    const mergedSelection = ballSelection.merge(enterSelection);
+
+    mergedSelection.attr('r', radius).attr('stroke', color);
 
     ballSelection
       .exit()
@@ -123,7 +126,7 @@ export class App extends React.Component {
             increaseRadius={this.increaseRadius}
             decreaseRadius={this.decreaseRadius}
           />
-          <button className="update-btn" onClick={this.dropWool}>
+          <button className="update-btn" onClick={this.updateWool}>
             update
           </button>
         </section>

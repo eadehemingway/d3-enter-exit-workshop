@@ -1,5 +1,8 @@
 import React from 'react';
 import * as d3 from 'd3';
+import { BallNumberPanel } from './BallNumberPanel';
+import { BallSizePanel } from './BallSizePanel';
+import { BallColorPanel } from './BallColorPanel';
 
 export class App extends React.Component {
   constructor(props) {
@@ -80,24 +83,20 @@ export class App extends React.Component {
     return (
       <section>
         <div id="chart" />
-        <div className="button-container">
-          <p>{this.state.balls.length}</p>
-          <button
-            id="increase"
-            className="increase-btn"
-            onClick={this.addWoolToQueue}
-          >
-            +
+
+        <section className="button_panel">
+          <BallNumberPanel
+            addWoolToQueue={this.addWoolToQueue}
+            minusWoolFromQueue={this.minusWoolFromQueue}
+            balls={this.state.balls}
+          />
+
+          <BallColorPanel />
+          <BallSizePanel />
+          <button className="update-btn" onClick={this.dropWool}>
+            update
           </button>
-          <button
-            id="decrease"
-            className="decrease-btn"
-            onClick={this.minusWoolFromQueue}
-          >
-            -
-          </button>
-          <button onClick={this.dropWool}>update</button>
-        </div>
+        </section>
       </section>
     );
   }

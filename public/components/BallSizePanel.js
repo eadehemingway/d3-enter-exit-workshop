@@ -7,15 +7,26 @@ export class BallSizePanel extends React.Component {
   }
 
   render() {
+    const { radius, increaseRadius, decreaseRadius } = this.props;
     return (
-      <div className="number-panel">
-        <p className="ballNumber">Size: </p>
-        <button id="increase" className="increase-btn">
-          +
-        </button>
-        <button id="decrease" className="decrease-btn">
-          -
-        </button>
+      <div className="size-panel">
+        <p className="ballNumber">Size: {radius} </p>
+        <div className="button-container">
+          <button
+            id="increase"
+            className="increase-btn"
+            onClick={increaseRadius}
+          >
+            +
+          </button>
+          <button
+            id="decrease"
+            className="decrease-btn"
+            onClick={decreaseRadius}
+          >
+            -
+          </button>
+        </div>
       </div>
     );
   }

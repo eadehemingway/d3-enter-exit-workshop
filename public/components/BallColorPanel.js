@@ -7,15 +7,15 @@ export class BallColorPanel extends React.Component {
   }
 
   render() {
+    const { color, changeColor } = this.props;
     return (
-      <div className="number-panel">
-        <p className="ballNumber">Color: </p>
-        <button id="increase" className="increase-btn">
-          -
-        </button>
-        <button id="decrease" className="decrease-btn">
-          -
-        </button>
+      <div className="color-panel">
+        <p className="ballNumber">Color: {color}</p>
+        <div className="button-container">
+          <button className="change-color-btn" onClick={changeColor}>
+            ~
+          </button>
+        </div>
       </div>
     );
   }

@@ -2,9 +2,7 @@
 
 ### the challenge
 
-put all your code in the App.js file.
-It should have the same functionality as it had before it used react.
-Think about how the what should trigger the update function...
+steps:
 
 ### to run the app for development
 

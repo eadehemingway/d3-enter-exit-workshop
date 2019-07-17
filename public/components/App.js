@@ -60,14 +60,17 @@ export class App extends React.Component {
       .attr('cy', 0)
       .attr('fill', 'none')
       .attr('stroke-width', 6)
-      .transition()
-      .duration(1250)
-      .ease(d3.easeBounce)
-      .attr('cy', d => d.y);
+      .attr('r', radius);
 
     const mergedSelection = ballSelection.merge(enterSelection);
 
-    mergedSelection.attr('r', radius).attr('stroke', color);
+    mergedSelection
+      .transition()
+      .duration(1250)
+      .ease(d3.easeBounce)
+      .attr('stroke', color)
+      .attr('cy', d => d.y)
+      .attr('r', radius);
 
     ballSelection
       .exit()

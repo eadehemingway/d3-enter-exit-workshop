@@ -24,16 +24,8 @@ There are three button panels. One for amount of balls, one for color, one for s
 
 ### to run the app for development
 
-in public
+in root
 
 ```
-npm run build:watch
+npm run dev-server
 ```
-
-in server
-
-```
-npm start
-```
-
-go to http://localhost:3000

@@ -1,6 +1,6 @@
 # Enter and Exit WS
 
-![](./public/cat-gif.gif)
+![](./cat-gif.gif)
 
 ### the challenge
 
